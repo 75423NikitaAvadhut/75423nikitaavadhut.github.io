@@ -35,18 +35,15 @@
   font-size: var(--step--1);
 }
 
-.section { padding-block: var(--space-2xl); }
+/* At this font size the links are only ~21px tall — under the 24px minimum
+   for a pointer target. The padding is the tap area, not decoration. */
+.site-nav a { padding-block: var(--space-2xs); }
 
-.section-label {
-  font-family: var(--font-mono);
-  font-size: var(--step--1);
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: var(--space-md);
-}
+/* Space above only. Two stacked sections would otherwise add their
+   padding together and open a gap twice as big as the one at the top. */
+.section { padding-block-start: var(--space-2xl); }
 
-.hero { padding-block: var(--space-2xl) var(--space-xl); }
+.hero { padding-block: var(--space-2xl) 0; }
 
 .hero-lead {
   font-size: var(--step-1);
@@ -57,6 +54,7 @@
 }
 
 .site-footer {
+  margin-top: var(--space-2xl);
   border-top: 1px solid var(--line);
   padding-block: var(--space-lg) var(--space-xl);
   font-size: var(--step--1);

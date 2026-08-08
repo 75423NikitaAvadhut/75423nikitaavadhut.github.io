@@ -31,14 +31,21 @@ h3 { font-size: var(--step-1); }
 
 p, li { max-width: var(--measure); }
 p { margin: 0 0 var(--space-sm); }
+/* A trailing paragraph must not add to the gap its container already sets. */
+p:last-child { margin-bottom: 0; }
 
 a {
   color: inherit;
   text-decoration-color: var(--line);
   text-underline-offset: 0.25em;
-  transition: text-decoration-color var(--dur) var(--ease);
+  transition: color var(--dur) var(--ease),
+              text-decoration-color var(--dur) var(--ease);
 }
-a:hover { text-decoration-color: var(--accent); }
+a:hover,
+a:focus-visible {
+  color: var(--accent-text);
+  text-decoration-color: var(--accent);
+}
 
 /* A visible focus ring is not optional. Keyboard users need to see where they are. */
 :focus-visible {
