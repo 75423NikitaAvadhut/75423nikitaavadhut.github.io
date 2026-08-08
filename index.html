@@ -67,11 +67,11 @@
   <main id="main">
 
     <section class="hero">
-      <h1>Backend developer building things that hold up in production.</h1>
+      <h1>I build backend systems, and the guardrails that keep them safe to use.</h1>
       <p class="hero-lead">
-        <!-- TODO: two sentences in your own voice. What you build, and what you want next. -->
-        I work with Java, Spring Boot and SQL at Sonata Software in Bengaluru, and
-        I am currently deepening my front-end craft.
+        Java and Spring Boot developer in Bengaluru, working on internal platforms
+        and test automation. Currently building my front-end craft — starting with
+        this site.
       </p>
     </section>
 
@@ -79,10 +79,14 @@
       <p class="section-label">About</p>
       <h2>What I do</h2>
       <p>
-        <!-- TODO: replace with your own words. Keep sentences factual and specific. -->
-        I build backend services and internal tools, and I have worked across both
-        development and test automation. My background is a BE in Computer Science
-        and a PG Diploma in Advanced Computing from C-DAC.
+        I work on backend development and test automation. Most of what I build is
+        internal — tools other developers and teams rely on to get their own work done,
+        which means reliability and a clear audit trail matter more than novelty.
+      </p>
+      <p>
+        My background is a BE in Computer Science and a PG Diploma in Advanced Computing
+        from C-DAC. I am now learning front-end development properly, which is why this
+        site is written from scratch rather than assembled from a template.
       </p>
       <ul class="tag-list">
         <li class="tag">Java</li>
@@ -102,15 +106,20 @@
       <details class="project">
         <summary class="project-summary">
           <span class="project-title">Internal database operations platform</span>
-          <span class="project-meta">Sonata Software <span class="project-marker" aria-hidden="true">+</span></span>
+          <span class="project-meta">Enterprise project <span class="project-marker" aria-hidden="true">+</span></span>
         </summary>
         <div class="project-body">
           <p>
-            <!-- TODO: name your specific contribution, and one decision you made and why. -->
-            A full-stack internal tool for a global consumer electronics client that let
-            non-technical users run database operations through a guided interface instead
-            of writing SQL by hand. Supported MySQL, Oracle and PostgreSQL behind a single
-            front end.
+            Developers who needed a database change had to raise a request and wait for
+            another team to action it. I built the backend query generation for an internal
+            platform that let them do it themselves through guided templates — altering
+            tables, renaming or adding columns, updating rows, running reports — and wrote
+            several of the templates.
+          </p>
+          <p>
+            Delete operations were deliberately excluded and every action was logged, so
+            routine work stopped queueing without giving anyone unrestricted access to
+            the database.
           </p>
           <ul class="tag-list">
             <li class="tag">Spring Boot</li>
@@ -124,20 +133,30 @@
 
       <details class="project">
         <summary class="project-summary">
-          <span class="project-title">Test automation framework</span>
-          <span class="project-meta">Sonata Software <span class="project-marker" aria-hidden="true">+</span></span>
+          <span class="project-title">E-commerce test automation</span>
+          <span class="project-meta">Enterprise project <span class="project-marker" aria-hidden="true">+</span></span>
         </summary>
         <div class="project-body">
           <p>
-            <!-- TODO: what did automation replace, and what changed as a result? -->
-            Automated regression suites for a multinational healthcare client, alongside
-            manual testing and defect tracking.
+            Testing for a medical equipment e-commerce platform used by a multinational
+            healthcare client. I covered the transactional core: order placement across
+            multiple purchase types including direct purchase and consignment, invoicing,
+            returns and exchanges, order and return history, catalogue browsing and
+            product detail pages.
+          </p>
+          <p>
+            I tested each flow manually first, then automated it with Robot Framework.
+            Alongside writing new scripts I ran regression cycles, maintained the framework,
+            stabilised existing scripts as the application changed, and prepared SIT
+            documentation.
           </p>
           <ul class="tag-list">
             <li class="tag">Robot Framework</li>
-            <li class="tag">ServiceNow</li>
+            <li class="tag">Manual testing</li>
+            <li class="tag">Regression</li>
+            <li class="tag">SIT documentation</li>
             <li class="tag">JIRA</li>
-            <li class="tag">Power BI</li>
+            <li class="tag">ServiceNow</li>
           </ul>
         </div>
       </details>
@@ -145,16 +164,16 @@
       <details class="project">
         <summary class="project-summary">
           <span class="project-title">Hospital Management System</span>
-          <span class="project-meta">Team project <span class="project-marker" aria-hidden="true">+</span></span>
+          <span class="project-meta">Team project, C-DAC <span class="project-marker" aria-hidden="true">+</span></span>
         </summary>
         <div class="project-body">
           <p>
-            <!-- TODO: state clearly which parts were yours. Team projects must say so. -->
-            A web application for patient registration, appointments and records, built as
-            a team project during the C-DAC programme.
+            A web application for patient registration, appointments and patient records,
+            built by a team of three during the PG Diploma in Advanced Computing. I worked
+            on the backend in Java.
           </p>
           <ul class="tag-list">
-            <li class="tag">Java EE</li>
+            <li class="tag">Java</li>
             <li class="tag">React</li>
             <li class="tag">MySQL</li>
             <li class="tag">REST API</li>

@@ -25,7 +25,8 @@
   --step-3:  clamp(2.20rem, 1.60rem + 3.00vw, 4.20rem);
 
   --leading-tight: 1.15;
-  --leading-body:  1.65;
+  --leading-snug:  1.38;
+  --leading-body:  1.55;
 
   /* Spacing */
   --space-2xs: 0.25rem;

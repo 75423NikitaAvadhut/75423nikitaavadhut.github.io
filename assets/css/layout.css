@@ -50,6 +50,7 @@
 
 .hero-lead {
   font-size: var(--step-1);
+  line-height: var(--leading-snug);
   color: var(--text-muted);
   max-width: 42ch;
   margin-top: var(--space-md);
