@@ -6,7 +6,11 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: var(--bg-glow);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100dvh;
   color: var(--text);
   font-family: var(--font-sans);
   font-size: var(--step-0);
