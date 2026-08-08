@@ -1,0 +1,98 @@
+/* components.css — reusable pieces. Every one is used on the page.
+   If something here stops being used, delete it. */
+
+/* Project — a quiet row that opens in place.
+   Built on native <details>, so it works with no JavaScript and is keyboard
+   accessible for free. The content stays in the page for search engines
+   even while collapsed. */
+.project {
+  border-top: 1px solid var(--line);
+}
+.project:last-of-type { border-bottom: 1px solid var(--line); }
+
+.project-summary {
+  cursor: pointer;
+  list-style: none;
+  padding-block: var(--space-md);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  transition: color var(--dur) var(--ease);
+}
+.project-summary::-webkit-details-marker { display: none; }
+.project-summary:hover { color: var(--accent-text); }
+
+.project-title {
+  font-size: var(--step-1);
+  font-weight: 500;
+}
+
+.project-meta {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Rotates when the row opens. Not a hover effect, so it works on touch. */
+.project-marker {
+  display: inline-block;
+  transition: transform var(--dur) var(--ease);
+}
+.project[open] .project-marker { transform: rotate(45deg); }
+
+.project-body { padding-bottom: var(--space-lg); }
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0 0;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.15em 0.6em;
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: inherit;
+  font: inherit;
+  font-size: var(--step--1);
+  padding: 0.3em 0.8em;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease);
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+/* Sections fade up as they enter view. Starts visible, so if JavaScript never
+   runs the content is still readable — the class is only added by JS. */
+.reveal {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 500ms var(--ease), transform 500ms var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}

@@ -1,0 +1,11 @@
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+
+# Local Claude Code settings — machine specific, not part of the site
+.claude/
+
+# Never commit anything with personal data in it
+assets/docs/*-private.*

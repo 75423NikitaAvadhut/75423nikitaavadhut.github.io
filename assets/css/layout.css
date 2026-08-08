@@ -1,0 +1,69 @@
+/* layout.css — page structure and section rhythm. */
+
+.page {
+  width: min(100% - 2.5rem, var(--page-max));
+  margin-inline: auto;
+}
+
+/* Keyboard users land here first. Hidden until focused. */
+.skip-link {
+  position: absolute;
+  left: var(--space-sm);
+  top: -4rem;
+  z-index: 10;
+  background: var(--surface);
+  color: var(--text);
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: top var(--dur) var(--ease);
+}
+.skip-link:focus { top: var(--space-sm); }
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-block: var(--space-md);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--step--1);
+}
+
+.section { padding-block: var(--space-2xl); }
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.hero { padding-block: var(--space-2xl) var(--space-xl); }
+
+.hero-lead {
+  font-size: var(--step-1);
+  color: var(--text-muted);
+  max-width: 42ch;
+  margin-top: var(--space-md);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-lg) var(--space-xl);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+
+/* Nav collapses to a simple wrap on small screens. No hamburger needed for four links. */
+@media (max-width: 34rem) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .site-nav { flex-wrap: wrap; gap: var(--space-sm); }
+}

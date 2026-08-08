@@ -1,0 +1,70 @@
+/* base.css — resets and defaults for plain HTML elements. No classes here. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  line-height: var(--leading-tight);
+  font-weight: 500;
+  margin: 0 0 var(--space-sm);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--step-3); letter-spacing: -0.02em; }
+h2 { font-size: var(--step-2); letter-spacing: -0.01em; }
+h3 { font-size: var(--step-1); }
+
+p, li { max-width: var(--measure); }
+p { margin: 0 0 var(--space-sm); }
+
+a {
+  color: inherit;
+  text-decoration-color: var(--line);
+  text-underline-offset: 0.25em;
+  transition: text-decoration-color var(--dur) var(--ease);
+}
+a:hover { text-decoration-color: var(--accent); }
+
+/* A visible focus ring is not optional. Keyboard users need to see where they are. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* Some people get physically unwell from motion. Honour their setting. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Visible only to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

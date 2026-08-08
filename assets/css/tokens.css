@@ -1,0 +1,71 @@
+/* tokens.css
+   The single source of truth for colour, type and spacing.
+   No other file may hardcode a colour or a size. Change it here, the site follows. */
+
+:root {
+  /* Colour — light mode is the default */
+  --bg:            #f4f4f4;
+  --surface:       #ffffff;
+  --text:          #161819;
+  --text-muted:    #5a5f61;
+  --line:          #d8d8d6;
+  --accent:        #1d9e75;
+  --accent-text:   #0f6e56;
+
+  /* Type */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+
+  /* Fluid type scale. clamp(min, preferred, max) grows with the viewport,
+     so there is no separate mobile font size to maintain. */
+  --step--1: clamp(0.83rem, 0.80rem + 0.15vw, 0.92rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.20vw, 1.13rem);
+  --step-1:  clamp(1.25rem, 1.15rem + 0.50vw, 1.60rem);
+  --step-2:  clamp(1.60rem, 1.35rem + 1.20vw, 2.40rem);
+  --step-3:  clamp(2.20rem, 1.60rem + 3.00vw, 4.20rem);
+
+  --leading-tight: 1.15;
+  --leading-body:  1.65;
+
+  /* Spacing */
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 7rem;
+
+  /* Layout */
+  --measure:   68ch;
+  --page-max:  1100px;
+  --radius:    6px;
+
+  /* Motion */
+  --dur: 200ms;
+  --ease: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* Dark mode — follows the visitor's system setting unless they choose otherwise */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:          #131415;
+    --surface:     #1c1e1f;
+    --text:        #f1f1ef;
+    --text-muted:  #a3a8a6;
+    --line:        #34383a;
+    --accent:      #5dcaa5;
+    --accent-text: #9fe1cb;
+  }
+}
+
+/* Explicit override from the theme toggle */
+:root[data-theme="dark"] {
+  --bg:          #131415;
+  --surface:     #1c1e1f;
+  --text:        #f1f1ef;
+  --text-muted:  #a3a8a6;
+  --line:        #34383a;
+  --accent:      #5dcaa5;
+  --accent-text: #9fe1cb;
+}
